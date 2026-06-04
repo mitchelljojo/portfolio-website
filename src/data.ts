@@ -33,25 +33,25 @@ export const metrics = [
   { value: "4+", label: "years in data and operations" },
   { value: "8", label: "regional markets supported" },
   { value: "20%", label: "E2E resolution hours reduced" },
-  { value: "98%+", label: "quality accuracy maintained" },
+  { value: "15%", label: "Reduce pax cancellation" },
 ];
 
 export const skills = [
   {
     title: "Data Modeling",
-    items: ["SQL", "Warehouse Tables", "Business Logic", "Single Source of Truth"],
+    items: ["SQL", "Warehouse Tables", "Business Logic", "ETL Data Pipeline"],
   },
   {
     title: "Analytics",
-    items: ["Python", "K-Means", "Cohort Analysis", "Root Cause Analysis"],
+    items: ["Python", "Machine Learning", "Predictive Analytic", "Root Cause Analysis"],
   },
   {
     title: "Visualization",
-    items: ["Looker Studio", "Tableau", "Power BI", "Executive Reporting"],
+    items: ["Looker Studio", "Tableau", "Power BI"],
   },
   {
     title: "Operations Systems",
-    items: ["Airflow", "Jira", "CRM Tools", "QA Frameworks"],
+    items: ["Airflow", "Jira", "CRM Tools"],
   },
 ];
 
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     description:
       "Segmented investment profiles with K-Means to identify behavior patterns and support clearer portfolio recommendations.",
     impact: "Built an end-to-end analysis deck and reproducible Python notebook.",
-    tools: ["Python", "K-Means", "Presentation"],
+    tools: ["Python", "K-Means"],
     link: "https://github.com/mitchelljojo/Portofolio/blob/main/Investment%20Clusterin%20Analysis.ipynb",
   },
   {
