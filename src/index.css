@@ -12,6 +12,8 @@
   --teal: #0f766e;
   --teal-dark: #0b4f4a;
   --gold: #b88746;
+  --copper: #bd7d61;
+  --blush: #ead7cd;
   --coral: #bd5a47;
   --charcoal: #202427;
   --border: #d9d2c7;
@@ -79,10 +81,11 @@ img {
 
 .top-nav {
   align-items: center;
-  background: rgba(251, 250, 247, 0.82);
+  background: rgba(255, 252, 248, 0.86);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(217, 210, 199, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
+  box-shadow: 0 12px 40px rgba(81, 57, 46, 0.08);
   display: flex;
   gap: 24px;
   justify-content: space-between;
@@ -119,7 +122,7 @@ img {
 
 .nav-links a {
   border-radius: 999px;
-  color: var(--muted);
+  color: #5f5b57;
   font-size: 0.92rem;
   font-weight: 700;
   min-height: 38px;
@@ -128,7 +131,7 @@ img {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  background: var(--linen);
+  background: rgba(189, 125, 97, 0.12);
   color: var(--ink);
   outline: none;
 }
@@ -152,8 +155,8 @@ img {
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(23, 32, 29, 0.92) 0%, rgba(23, 32, 29, 0.74) 42%, rgba(23, 32, 29, 0.15) 100%),
-    linear-gradient(0deg, rgba(23, 32, 29, 0.55), rgba(23, 32, 29, 0.05) 42%);
+    linear-gradient(90deg, rgba(255, 252, 248, 0.96) 0%, rgba(255, 250, 244, 0.86) 34%, rgba(255, 246, 240, 0.24) 66%, rgba(255, 246, 240, 0.02) 100%),
+    linear-gradient(0deg, rgba(251, 250, 247, 0.34), rgba(251, 250, 247, 0.04));
   inset: 0;
   position: absolute;
   z-index: -2;
@@ -161,16 +164,16 @@ img {
 
 .hero-content {
   align-items: center;
-  color: var(--white);
+  color: #40342f;
   display: flex;
   min-height: 92svh;
   padding: 128px max(24px, calc((100vw - 1120px) / 2)) 84px;
-  width: min(760px, 100%);
+  width: min(700px, 100%);
 }
 
 .availability {
   align-items: center;
-  color: #f2d9ad;
+  color: var(--copper);
   display: inline-flex;
   font-weight: 800;
   gap: 8px;
@@ -178,25 +181,77 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(3.4rem, 8vw, 6.9rem);
-  line-height: 0.95;
+  color: #463832;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.2rem, 8.6vw, 7.4rem);
+  font-weight: 400;
+  line-height: 0.86;
   margin: 0;
   max-width: 720px;
 }
 
+.hero h1 span {
+  display: block;
+}
+
 .hero-tagline {
-  color: rgba(255, 255, 255, 0.86);
+  color: #413c38;
   font-size: clamp(1.12rem, 2vw, 1.5rem);
   line-height: 1.55;
-  margin: 26px 0 0;
-  max-width: 660px;
+  margin: 30px 0 0;
+  max-width: 610px;
+}
+
+.hero-tagline strong {
+  color: var(--copper);
+}
+
+.hero-divider {
+  background: linear-gradient(90deg, rgba(189, 125, 97, 0.4), rgba(184, 135, 70, 0.86), rgba(189, 125, 97, 0));
+  height: 1px;
+  margin: 26px 0;
+  max-width: 560px;
+  position: relative;
+}
+
+.hero-divider::after {
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(184, 135, 70, 0.4);
+  content: "";
+  height: 8px;
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 8px;
+}
+
+.hero-points {
+  display: grid;
+  gap: 15px 26px;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  margin-top: 0;
+}
+
+.hero-points span {
+  align-items: center;
+  color: #4f4742;
+  display: inline-flex;
+  font-size: 0.98rem;
+  font-weight: 750;
+  gap: 11px;
+}
+
+.hero-points svg {
+  color: var(--copper);
+  flex: 0 0 auto;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin-top: 44px;
 }
 
 .button {
@@ -212,14 +267,14 @@ img {
 }
 
 .button.primary {
-  background: var(--gold);
-  color: #15120d;
+  background: var(--copper);
+  color: var(--white);
 }
 
 .button.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.4);
-  color: var(--white);
+  background: rgba(255, 252, 248, 0.36);
+  border-color: rgba(189, 125, 97, 0.56);
+  color: #5b453d;
 }
 
 .button:hover,
@@ -645,10 +700,22 @@ img {
     padding-top: 122px;
   }
 
+  .hero-image {
+    object-position: 64% center;
+  }
+
   .hero-overlay {
     background:
-      linear-gradient(90deg, rgba(23, 32, 29, 0.94), rgba(23, 32, 29, 0.72)),
-      linear-gradient(0deg, rgba(23, 32, 29, 0.62), rgba(23, 32, 29, 0.08));
+      linear-gradient(90deg, rgba(255, 252, 248, 0.96), rgba(255, 250, 244, 0.86)),
+      linear-gradient(0deg, rgba(251, 250, 247, 0.44), rgba(251, 250, 247, 0.12));
+  }
+
+  .hero h1 {
+    font-size: clamp(3.7rem, 18vw, 5.4rem);
+  }
+
+  .hero-points {
+    grid-template-columns: 1fr;
   }
 
   .content-band,

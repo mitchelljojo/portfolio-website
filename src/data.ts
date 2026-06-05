@@ -25,6 +25,7 @@ export const personalInfo = {
   linkedin: "linkedin.com/in/jojo-mitchel",
   github: "github.com/mitchelljojo",
   roles: ["Analytics Engineer", "Data Analyst", "Data Scientist"],
+  heroHighlights: ["Data Modeling", "Product & Operations Analytics", "Insight-Led Decision Making"],
   summary:
     "Data professional with 4+ years of experience across e-commerce, ride-hailing, edutech, and customer operations. I build reliable SQL models, automate reporting workflows, and translate business questions into dashboards and analysis that teams can actually use. My recent work includes regional data quality frameworks, CRM operations analytics, and process improvements that reduced manual effort while improving decision speed.",
 };

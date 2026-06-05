@@ -68,7 +68,7 @@ export default function App() {
       </nav>
 
       <header id="top" className="hero">
-        <img src="/analytics-workspace.png" alt="" className="hero-image" />
+        <img src="/floral-data-banner.png" alt="" className="hero-image" />
         <div className="hero-overlay" />
         <div className="hero-content">
           <div className="hero-copy">
@@ -76,8 +76,26 @@ export default function App() {
               <Sparkles size={16} aria-hidden="true" />
               <span>{personalInfo.location}</span>
             </div>
-            <h1>{personalInfo.displayName}</h1>
-            <p className="hero-tagline">{personalInfo.tagline}</p>
+            <h1>
+              <span>Jordan</span>
+              <span>Mitchel</span>
+            </h1>
+            <p className="hero-tagline">
+              <strong>Analytics Engineer</strong> bridging data, operations, and strategy to
+              build reporting systems teams can trust.
+            </p>
+            <div className="hero-divider" aria-hidden="true" />
+            <div className="hero-points" aria-label="Portfolio focus areas">
+              {personalInfo.heroHighlights.map((highlight, index) => {
+                const Icon = [Database, BarChart3, Sparkles][index] ?? CheckCircle2;
+                return (
+                  <span key={highlight}>
+                    <Icon size={19} aria-hidden="true" />
+                    {highlight}
+                  </span>
+                );
+              })}
+            </div>
             <div className="hero-actions">
               <a className="button primary" href="#projects">
                 <span>View projects</span>
