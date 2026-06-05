@@ -24,6 +24,7 @@ import {
 } from "./data";
 
 const navItems = ["Work", "Projects", "Experience", "Contact"];
+const bannerImage = `${import.meta.env.BASE_URL}floral-data-banner.png`;
 
 function FadeIn({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
   return (
@@ -68,7 +69,7 @@ export default function App() {
       </nav>
 
       <header id="top" className="hero">
-        <img src="/floral-data-banner.png" alt="" className="hero-image" />
+        <img src={bannerImage} alt="" className="hero-image" />
         <div className="hero-overlay" />
         <div className="hero-content">
           <div className="hero-copy">
